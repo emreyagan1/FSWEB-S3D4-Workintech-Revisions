@@ -1,5 +1,12 @@
 # Gün Projesi: Workintech Revizeleri
 
+## Güncel Sürüm
+
+Bu repodaki kod, Workintech NextGen üzerinde **%100 başarıyla tamamlanan güncel sürümdür.**
+
+> **Not:** Logo görselinin URL'si, NextGen testlerinde kullanılan güncel bağlantıya göre düzenlenmiştir. Bu nedenle proje içerisindeki logo bağlantısı, bazı eski test dosyalarında bulunan URL'den farklı olabilir.
+
+
 ## Proje Tanımı
 
 Workintech firması ile yapılan toplantıda dün yaptığın layout gösterildi.

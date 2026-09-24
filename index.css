@@ -1,6 +1,9 @@
 body {
   font-family: 'Montserrat';
+  margin: 0;
+  padding: 0;;
 }
+
 
 .btn {
   padding: 10px 15px;
@@ -19,6 +22,10 @@ body {
  ve aralıklarını dokümanın default font değerinin 2 katı olacak şekilde flex ayarları ile yapalım. */
 header {
   margin: 10px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
 }
 
 nav {
@@ -34,18 +41,37 @@ nav a {
   text-decoration: none;
 }
 
+.main-container{
+  display: flex;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+  width: 80%;
+  max-width: 750px;
+  padding: 5%;
+  margin: 0 auto;
+}
 /* **** Main **** */
 /* css-2 .main-container class'ı için kural tanımlayalım ve içindeki yazıları ortalayalım.*/
 /* css-3 .main-container'ın genişliği ekranın %80'i olsun ve maksimum genişliği 750px olsun.*/
 /* css-4 .main-container'ın blok olarak yatayda ortalı olsun */
 /* css-5 iç dolgusu %5 olsun.*/
 
+h1 {
+  text-transform: uppercase;
+}
 /* css-6 h1 başlığı büyük harfler olsun */
 
 /* css-7 .main-section içindeki imajı ekranın sağına ve soluna dayayalım. */
 .main-section img {
+  width: 100%;
 }
 
+.advantages-section {
+  display: flex;
+  justify-content: space-between;
+  margin: 5% 0;
+}
 /* **** Advantages **** */
 /* 
   css-8 advantages-section class'ında;
@@ -64,6 +90,8 @@ genişliği bulunduğu alanın %15'i olsun
 en/boy oranı 1/4 olsun
 */
 .advantages-section img {
+  width: 15%;
+  aspect-ratio: 1 / 4;
 }
 
 /* 
@@ -74,6 +102,13 @@ css-12 flex kullanarak column yönünde dikeyde ve yatayda ortalı olsun.
 css-13 metinler ortalansın
 */
 .advantages-section div {
+  width: 15%;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
 }
 
 /* **** footer **** */
@@ -88,6 +123,33 @@ footer button {
   margin: 20px auto;
 }
 
+@media(max-width: 500px) {
+  body {
+    min-width: 300px;
+  }
+
+  .advantages-section {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 1rem;
+  }
+
+  .advantages-section img {
+    width:45%
+  }
+
+  .advantages-section div {
+    flex: 1;
+  }
+
+nav {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  text-align: center;
+  align-items: stretch;
+}
+}
 /* css-14 responsive tasarım için maksimum genişlik 500px için media query yazalım.
 css-15 body tag'ini kullanarak sayfanın 300px'den küçük olmasını engelleyelim.
 css-16 advantages-section class'ı için sığmayan item'ların aşağı kayması(wrap) için flex ve satır arasını ana font boyutunun 1 katını flex özelliklerini kullanarak ayarlayalım.
